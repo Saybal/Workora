@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "question": "How do I get started as a freelancer on your platform?",
+      "answer": "Sign up for an account, complete your profile with your skills and portfolio, and start bidding on projects that match your expertise."
+    },
+    {
+      "id": 2,
+      "question": "What are the payment options for receiving earnings?",
+      "answer": "Payments can be received via bank transfer, PayPal, or other supported digital wallets, typically disbursed within 3-5 business days after project completion."
+    },
+    {
+      "id": 3,
+      "question": "Are there any fees for using the platform?",
+      "answer": "We charge a 10% service fee on completed projects, deducted from your earnings, with no upfront costs for freelancers."
+    },
+    {
+      "id": 4,
+      "question": "How can I ensure my profile stands out to clients?",
+      "answer": "Add a professional photo, detailed skill descriptions, relevant certifications, and high-quality portfolio samples to attract client attention."
+    },
+    {
+      "id": 5,
+      "question": "What happens if a client doesn’t pay for completed work?",
+      "answer": "Our platform offers payment protection; funds are held in escrow and released only when the client approves the work, or disputes are resolved."
+    },
+    {
+      "id": 6,
+      "question": "Can I work on multiple projects at once?",
+      "answer": "Yes, freelancers can take on multiple projects as long as they manage deadlines and maintain quality, as per client agreements."
+    },
+    {
+      "id": 7,
+      "question": "How do I communicate with clients on the platform?",
+      "answer": "Use our built-in messaging system to chat with clients, share files, and discuss project details securely within the platform."
+    },
+    {
+      "id": 8,
+      "question": "Is there a rating system for freelancers?",
+      "answer": "Yes, clients can rate freelancers based on project performance, and high ratings can improve your visibility and chances of landing more projects."
+    }
+  ]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Web Development",
+    "subtitle": "Crafting responsive and dynamic websites",
+    "image": "https://st2.depositphotos.com/16685936/49610/v/1600/depositphotos_496105502-stock-illustration-concept-web-design-website-development.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Video Editing",
+    "subtitle": "Transforming footage into compelling stories",
+    "image": "https://static.vecteezy.com/system/resources/previews/023/074/110/non_2x/the-video-editor-program-is-displayed-on-the-computer-the-display-shows-the-application-for-editing-video-clips-film-footage-montage-clip-editing-software-interface-creating-visual-effects-vfx-vector.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Software Development",
+    "subtitle": "Building robust and scalable applications",
+    "image": "https://img.freepik.com/premium-photo/programmers-working-code-software-development_1222783-21207.jpg"
+  },
+  {
+    "id": 4,
+    "title": "SEO",
+    "subtitle": "Boosting visibility with strategic optimization",
+    "image": "https://media.istockphoto.com/id/2151744120/vector/trendy-halftone-collage-laptop-banner-vector-illustration.jpg?s=2048x2048&w=is&k=20&c=azK_-BU7VPT8xwSDFgRWaxlEh3dwIO1y3dIp-dRikQ8="
+  },
+  {
+    "id": 5,
+    "title": "Architecture & Interior Design",
+    "subtitle": "Designing spaces that inspire and function",
+    "image": "https://cdn.lynda.com/course/193748/193748-635574423026615645-16x9.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Writing",
+    "subtitle": "Creating visually stunning book layouts",
+    "image": "https://indieground.net/wp-content/uploads/2023/11/indieblog-musthavegraphicdesignbooks-ogimage.jpg"
+  }
+]
