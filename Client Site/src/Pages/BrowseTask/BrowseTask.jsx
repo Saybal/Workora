@@ -43,11 +43,12 @@ const BrowseTask = () => {
       ) : (
         <div className="my-7">
           <div>
-            <h1 className="text-5xl my-12 text-center font-semibold">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl my-8 sm:my-10 md:my-12 text-center font-semibold leading-tight">
               <span className="bg-[linear-gradient(to_right,_#6366f1_10%,_#0ea5e9_30%,_#10b981_90%)] bg-clip-text text-transparent">
                 Browse
               </span>{" "}
-              Your Tasks, <br /> Turn Skills Into{" "}
+              Your Tasks, <br className="hidden sm:block" />
+              Turn Skills Into{" "}
               <span className="bg-[linear-gradient(to_right,_#6366f1_10%,_#0ea5e9_30%,_#10b981_90%)] bg-clip-text text-transparent">
                 Paychecks
               </span>
@@ -55,10 +56,20 @@ const BrowseTask = () => {
 
             <div className="relative w-full max-w-md mx-auto">
               <div className="my-5">
-                <SearchBar input={input} setInput={setInput} setSuggestion={setSuggestion} setTaskData={setTaskData} />
+                <SearchBar
+                  input={input}
+                  setInput={setInput}
+                  setSuggestion={setSuggestion}
+                  setTaskData={setTaskData}
+                />
               </div>
               <div>
-                <SuggestionList input={input} suggestion={suggestion} taskdata={taskdata} setTaskData={setTaskData}  />
+                <SuggestionList
+                  input={input}
+                  suggestion={suggestion}
+                  taskdata={taskdata}
+                  setTaskData={setTaskData}
+                />
               </div>
             </div>
           </div>

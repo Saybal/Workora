@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Footer = () => {
   return (
@@ -14,7 +15,7 @@ const Footer = () => {
         </nav>
         <nav className="flex flex-col space-y-2 min-w-[150px]">
           <h6 className="footer-title">Company</h6>
-          <a className="link link-hover">About us</a>
+          <Link to="/aboutus" className="link link-hover">About us</Link>
           <a className="link link-hover">Contact</a>
           <a className="link link-hover">Jobs</a>
           <a className="link link-hover">Press kit</a>
@@ -32,7 +33,7 @@ const Footer = () => {
         <aside className="flex items-center gap-4 text-center md:text-left">
           <img
             className="lg:w-67 md:w-55 w-40"
-            src="https://i.ibb.co/BKs4WFdG/logo.png"
+            src="https://i.ibb.co/x8hNy6Fw/Chat-GPT-Image-Jun-27-2025-01-45-28-PM.png"
             alt="Logo"
           />
           {/* <p className="text-sm sm:text-base">

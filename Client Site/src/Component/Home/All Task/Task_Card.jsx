@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 
 const Task_Card = ({ task, className = "" }) => {
   return (
@@ -32,7 +33,7 @@ const Task_Card = ({ task, className = "" }) => {
       </div>
 
       {/* Bottom Button */}
-      <button className="btn w-full mt-2 shawdow-none bg-[#960018] border-none text-amber-50">View Details</button>
+      <Link to={`/addtask/${task._id}`} className="btn w-full mt-2 shawdow-none bg-[#960018] border-none text-amber-50">View Details</Link>
     </motion.div>
   );
 };

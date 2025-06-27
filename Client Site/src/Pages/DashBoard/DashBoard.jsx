@@ -69,6 +69,9 @@ const DashBoard = () => {
           <li>
             <Link to="/dashboard/profile">My Profile</Link>
           </li>
+          <li>
+            <Link to="/">Back to Home</Link>
+          </li>
         </ul>
       </div>
     </div>

@@ -48,55 +48,45 @@ const Navbar = () => {
   const link = (
     <>
       <li>
-        <NavLink className="font-semibold text-base-content text-lg" to="/">
+        <NavLink className="font-semibold text-white text-lg" to="/">
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink
-          className="font-semibold text-base-content text-lg"
-          to="/add task"
-        >
-          Add Task
-        </NavLink>
-      </li>
-      <li>
-        <NavLink className="font-semibold text-base-content text-lg" to="/browse tasks">
+        <NavLink className="font-semibold text-white text-lg" to="/browse tasks">
           Browse Tasks
         </NavLink>
       </li>
       <li>
-        <NavLink className="font-semibold text-base-content text-lg" to={`/mypost/${user?.displayName || ""}`}>
-          My Posted Tasks
+        <NavLink className={`${user? "block": "hidden"} font-semibold  text-lg`} to={`/dashboard`}>
+          DashBoard
         </NavLink>
       </li>
       <li>
-        <NavLink className="font-semibold text-base-content text-lg" to="/faq">
+        <NavLink className="font-semibold  text-lg" to="/faq">
           FAQ
+        </NavLink>
+      </li>
+      <li>
+        <NavLink className="font-semibold  text-lg" to="/aboutus">
+          About Us
         </NavLink>
       </li>
       <li className="block lg:hidden md:hidden">
         <NavLink
-          className="font-semibold text-base-content text-lg"
+          className="font-semibold  text-lg"
           to="/login"
         >
           Login
         </NavLink>
       </li>
-      <li className="block lg:hidden md:hidden">
-        <NavLink
-          className="font-semibold text-base-content text-lg"
-          to="/profile"
-        >
-          Profile
-        </NavLink>
-      </li>
+      
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-teal-500 shadow-sm sticky top-0 z-50 text-white mx-4 mt-4 rounded-lg">
       <div className="navbar-start">
-        <div className="dropdown">
+        <div className="dropdown bg-teal-500">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +106,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu text-base-content menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             {link}
           </ul>
@@ -124,15 +114,15 @@ const Navbar = () => {
         <a className="flex gap-2 btn btn-ghost text-xl">
           {" "}
           <img
-            className="w-33 h-14 md:w-48 md:h-19 lg:w-50 lg:h-18 rounded-full"
-            src="https://i.ibb.co/BKs4WFdG/logo.png"
+            className="w-33 h-30 md:w-48 md:h-50 lg:w-50 lg:h-50 rounded-full"
+            src="https://i.ibb.co/r2YMcHpy/59559d60-fbc8-464d-a298-163bc66bde73-removalai-preview.png"
             alt=""
           />{" "}
           
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{link}</ul>
+        <ul className="menu text-white menu-horizontal px-1">{link}</ul>
       </div>
       <div className="navbar-end flex gap-2">
         {/* Theme Controller */}

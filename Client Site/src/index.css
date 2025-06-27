@@ -10,24 +10,11 @@
 
 .active {
  
-  background: linear-gradient(
-    to right,
-    #6366f1 10%,
-    #0ea5e9 30%,
-    #10b981 90%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  border: 2px solid white;
 }
 
 .button{
   border: 2px solid;
-  border-image: linear-gradient(
-    to right,
-    #6366f1 10%,   /* indigo-500 */
-    #0ea5e9 30%,   /* sky-500 */
-    #10b981 90%  );
-  border-image-slice: 1;
+  
   
 }

@@ -17,6 +17,8 @@ import FAQ from "../Component/FAQ/FAQ";
 import DashBoard from "../Pages/DashBoard/DashBoard";
 import { Component } from "react";
 import Overview from "../Pages/DashBoard/Overview";
+import AboutUs from "../Pages/About/AboutUs";
+import ContactUs from "../Pages/Contact/ContactUs";
 
 
 export const router = createBrowserRouter([
@@ -51,7 +53,16 @@ export const router = createBrowserRouter([
         path: "/faq",
         Component: FAQ,
       },
-
+      {
+        index: true,
+        path: 'aboutus',
+        Component: AboutUs
+      },
+      {
+        index: true,
+        path: 'contactus',
+        Component: ContactUs
+      },
       {
         Component: PrivateRoute,
         children: [
