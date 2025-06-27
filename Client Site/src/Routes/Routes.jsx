@@ -14,6 +14,10 @@ import TaskTable from "../Pages/AddTask/TaskTable";
 import UpdateTask from "../Pages/AddTask/UpdateTask";
 import BrowseFilter from "../Pages/BrowseTask/BrowseFilter";
 import FAQ from "../Component/FAQ/FAQ";
+import DashBoard from "../Pages/DashBoard/DashBoard";
+import { Component } from "react";
+import Overview from "../Pages/DashBoard/Overview";
+
 
 export const router = createBrowserRouter([
   {
@@ -45,7 +49,7 @@ export const router = createBrowserRouter([
       {
         index: true,
         path: "/faq",
-        Component: FAQ
+        Component: FAQ,
       },
 
       {
@@ -53,18 +57,8 @@ export const router = createBrowserRouter([
         children: [
           {
             index: true,
-            path: "profile",
-            Component: Profile,
-          },
-          {
-            index: true,
-            path: "add task",
-            Component: AddTask,
-          },
-          {
-            index: true,
-            path: "/mypost/:username",
-            Component: PostedTasks,
+            path: "addtask",
+            Component: AddTask
           },
           {
             index: true,
@@ -73,14 +67,45 @@ export const router = createBrowserRouter([
           },
           {
             index: true,
-            path: "/updatetask/:id",
-            Component: UpdateTask,
+            path: "/browsetask/:category",
+            Component: BrowseFilter,
+          },
+         
+        ],
+      },
+    ],
+  },
+  {
+    path: "/dashboard",
+    Component: PrivateRoute, // this renders the Outlet
+    children: [
+      {
+        path: "",
+        Component: DashBoard, // this layout will render its own <Outlet />
+        children: [
+          {
+            index: true,
+            Component: Overview,
           },
           {
             index: true,
-            path: "/browsetask/:category",
-            Component: BrowseFilter,
-          }
+            path: "profile",
+            Component: Profile,
+          },
+          {
+            index: true,
+            path: "add-task",
+            Component: AddTask,
+          },
+          {
+            path: "mypost/:username",
+            Component: PostedTasks,
+          },
+          {
+            index: true,
+            path: "updatetask/:id",
+            Component: UpdateTask,
+          },
         ],
       },
     ],

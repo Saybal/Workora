@@ -20,7 +20,7 @@ const TaskDetails = () => {
   // !TaskDetails fetch
   useEffect(() => {
     setLoading(true);
-    fetch(`https://assignment-10-eight.vercel.app/addtask/${id}`)
+    fetch(`http://localhost:3000/addtask/${id}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -41,7 +41,7 @@ const TaskDetails = () => {
   // Frelancer data fetch
   useEffect(() => {
     setLoading(true);
-    fetch(`https://assignment-10-eight.vercel.app/freelancers/${user.email}`)
+    fetch(`http://localhost:3000/freelancers/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -75,7 +75,7 @@ const TaskDetails = () => {
   }
 
   // First update freelancer's Bidtasks & Bid count
-  fetch(`https://assignment-10-eight.vercel.app/freelancers/${user.email}`, {
+  fetch(`http://localhost:3000/freelancers/${user.email}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -88,7 +88,7 @@ const TaskDetails = () => {
     .then((result) => {
       if (result.modifiedCount > 0) {
         // Then update the task's bid count
-        return fetch(`https://assignment-10-eight.vercel.app/addtask/${id}`, {
+        return fetch(`http://localhost:3000/addtask/${id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
@@ -108,7 +108,7 @@ const TaskDetails = () => {
         });
 
         // Now re-fetch freelancer data to get updated Bid count
-        return fetch(`https://assignment-10-eight.vercel.app/freelancers/${user.email}`);
+        return fetch(`http://localhost:3000/freelancers/${user.email}`);
       }
       throw new Error("Failed to update task");
     })

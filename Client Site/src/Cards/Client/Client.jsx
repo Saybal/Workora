@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Client = () => {
   return (
@@ -7,7 +8,7 @@ const Client = () => {
         {/* Left Content */}
         <div className=" text-white p-6 md:p-6 flex-1 flex flex-col justify-between bg-linear-to-t from-black from-65% md:from-10% lg:from-15% to-transparent">
           <div>
-            <p className="uppercase text-sm mb-2">For businesses</p>
+            <span className="uppercase text-sm mb-2 bg-black">For businesses</span>
             <h2 className="text-4xl font-bold leading-tight mb-4">
               Hire experts<br /> your way
             </h2>
@@ -17,31 +18,31 @@ const Client = () => {
             </p>
           </div>
 
-          {/* CTA Buttons */}
+          
           <div className="grid gap-4 md:grid-cols-3">
-            <div className="bg-green-600 text-white p-4 rounded-lg hover:bg-green-700 transition">
+            <div className="bg-green-600 text-white p-4 rounded-lg transition">
               <h3 className="text-lg font-semibold leading-snug">
                 Create a listing
                 <br />
                 to recruit talent
               </h3>
-              <p className="text-sm mt-2">Professional Hub™ →</p>
+              <p className="text-sm mt-2">Professional Hub</p>
             </div>
-            <div className="bg-green-600 text-white p-4 rounded-lg hover:bg-green-700 transition">
+            <div className="bg-green-600 text-white p-4 rounded-lg transition">
               <h3 className="text-lg font-semibold leading-snug">
                 Explore and
                 <br />
                 purchase services
               </h3>
-              <p className="text-sm mt-2">Service Catalog™ →</p>
+              <p className="text-sm mt-2">Service Catalog</p>
             </div>
-            <div className="bg-green-600 text-white p-4 rounded-lg hover:bg-green-700 transition">
+            <div className="bg-green-600 text-white p-4 rounded-lg transition">
               <h3 className="text-lg font-semibold leading-snug">
                 Seek guidance from a
                 <br />
                 sector specialist
               </h3>
-              <p className="text-sm mt-2">Expert Advice →</p>
+              <p className="text-sm mt-2">Expert Advice</p>
             </div>
           </div>
         </div>

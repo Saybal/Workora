@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
 import TaskCard from "../AddTask/TaskCard";
 import Swal from "sweetalert2";
+import SearchBar from "./Search Bar/SearchBar";
+import SuggestionList from "./Search Bar/SuggestionList";
 
 const BrowseTask = () => {
   const [taskdata, setTaskData] = useState([]);
+  const [suggestion, setSuggestion] = useState([]);
+  const [input, setInput] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-      document.title = "Browse Tasks | Workora";
-    }, []);
+    document.title = "Browse Tasks | Workora";
+  }, []);
 
   useEffect(() => {
     setLoading(true);
@@ -37,12 +41,32 @@ const BrowseTask = () => {
           <span className="loading loading-dots loading-xl"></span>
         </div>
       ) : (
-        ""
-      )}
+        <div className="my-7">
+          <div>
+            <h1 className="text-5xl my-12 text-center font-semibold">
+              <span className="bg-[linear-gradient(to_right,_#6366f1_10%,_#0ea5e9_30%,_#10b981_90%)] bg-clip-text text-transparent">
+                Browse
+              </span>{" "}
+              Your Tasks, <br /> Turn Skills Into{" "}
+              <span className="bg-[linear-gradient(to_right,_#6366f1_10%,_#0ea5e9_30%,_#10b981_90%)] bg-clip-text text-transparent">
+                Paychecks
+              </span>
+            </h1>
 
-      {taskdata.map((task) => (
-        <TaskCard key={task._id} task={task} />
-      ))}
+            <div className="relative w-full max-w-md mx-auto">
+              <div className="my-5">
+                <SearchBar input={input} setInput={setInput} setSuggestion={setSuggestion} setTaskData={setTaskData} />
+              </div>
+              <div>
+                <SuggestionList input={input} suggestion={suggestion} taskdata={taskdata} setTaskData={setTaskData}  />
+              </div>
+            </div>
+          </div>
+          {taskdata.map((task) => (
+            <TaskCard key={task._id} task={task} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

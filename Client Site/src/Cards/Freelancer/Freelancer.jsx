@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 const Freelancer = () => {
+
+  const navigate = useNavigate();
   return (
     <section className="py-10 px-4 md:px-0 bg-no-repeat bg-contain rounded-xl my-11 lg:bg-[url('https://thumbnails.production.thenounproject.com/6HqHY5AKXbDnNVKpRRrTbfnCNtk=/fit-in/1000x1000/photos.production.thenounproject.com/photos/D6053F54-2C20-4B9C-833E-3E335E691AB6.jpg')]">
       <div className="max-w-7xl mx-auto rounded-xl overflow-hidden flex flex-col lg:flex-row">
@@ -34,7 +37,7 @@ const Freelancer = () => {
                 <span>Choose your work schedule, location, and style</span>
                 <span>Unlock diverse earning opportunities</span>
               </div>
-              <button className="bg-white text-blue-600 font-semibold px-4 py-2 mt-5 rounded hover:bg-blue-100 transition">
+              <button onClick={()=> navigate('/browse tasks')} className="bg-white text-blue-600 font-semibold px-4 py-2 mt-5 rounded hover:bg-blue-100 transition">
                 Explore projects
               </button>
             </div>

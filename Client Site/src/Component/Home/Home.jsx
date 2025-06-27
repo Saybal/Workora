@@ -6,6 +6,7 @@ import Slider_home from "../../Slider/Slider_home.jsx/Slider_home";
 import Slider from "../../Slider/Slider";
 import Slider_task from "../../Slider/Slider_task";
 import Lottie from "lottie-react";
+import All_Task_Marquee from "./All Task/All_Task_Marquee";
 
 const Home = () => {
   const [featureData, setFeatureData] = useState([]);
@@ -108,7 +109,8 @@ const Home = () => {
 
       <Section title="Our highly trending features" data={featureData} />
       <Client />
-      <ClientTask task={task} />
+      {/* <ClientTask task={task} /> */}
+      <All_Task_Marquee/>
       <Freelancer />
     </div>
   );
