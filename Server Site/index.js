@@ -21,11 +21,10 @@ const client = new MongoClient(uri, {
 
 async function run() {
   try {
-    // await client.connect();
+    await client.connect();
     const taskCollection = client.db("FreelancingDB").collection("Addedtask");
-    const freelancers = client
-      .db("FreelancingDB")
-      .collection("freelancersdata");
+    const freelancers = client.db("FreelancingDB").collection("freelancersdata");
+    const feedbackCollection = client.db("FreelancingDB").collection("feedback");
 
     // !!For Browse Task
     app.get("/addtask", async (req, res) => {
@@ -81,11 +80,35 @@ async function run() {
       res.send(result);
     });
 
+    // !For Client's tasks
+    app.get("/mytasks/:email", async (req, res) => {
+      const Email = req.params.email;
+      const query = { email: Email };
+      const cursor = taskCollection.find(query);
+      const result = await cursor.toArray();
+      res.send(result);
+    });
+
+    // !For getting feedbacks
+    app.get("/feedback", async (req, res) => {
+      const cursor = feedbackCollection.find();
+      const result = await cursor.toArray();
+      res.send(result);
+    });
+
     // ! Posting All tasks
     app.post("/addtask", async (req, res) => {
       const task = req.body;
       console.log(task);
       const result = await taskCollection.insertOne(task);
+      res.send(result);
+    });
+
+    // !Posting Feedbacks
+    app.post("/feedback", async (req, res) => {
+      const feedback = req.body;
+      console.log(feedback);
+      const result = await feedbackCollection.insertOne(feedback);
       res.send(result);
     });
 
